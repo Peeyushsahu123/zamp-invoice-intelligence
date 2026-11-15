@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Intelligence — Zamp AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+                    colors: {
+                        navy: { 800: '#1e2a4a', 900: '#151d33' },
+                        brand: { 50: '#eef2ff', 100: '#e0e7ff', 200: '#c7d2fe', 400: '#818cf8', 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca' }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="/static/css/app.css">
+</head>
+<body class="bg-gray-50 font-sans antialiased">
+    <div id="app" class="flex h-screen overflow-hidden">
+        <!-- Sidebar -->
+        <aside id="sidebar" class="w-64 bg-navy-900 text-white flex flex-col shrink-0">
+            <div class="p-5 border-b border-white/10">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 bg-brand-500 rounded-lg flex items-center justify-center">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    </div>
+                    <div>
+                        <div class="font-bold text-sm tracking-wide">Invoice Intelligence</div>
+                        <div class="text-xs text-gray-400">Zamp AI Solutions</div>
+                    </div>
+                </div>
+            </div>
+            <nav class="flex-1 p-3 space-y-1" id="nav-links"></nav>
+            <div class="p-4 border-t border-white/10 text-xs text-gray-500">
+                v1.0 · AI-Powered AP Automation
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 overflow-y-auto">
+            <div id="page-content" class="p-6 max-w-7xl mx-auto"></div>
+        </main>
+    </div>
+
+    <script src="/static/js/api.js?v=3"></script>
+    <script src="/static/js/components.js?v=3"></script>
+    <script src="/static/js/pages.js?v=3"></script>
+    <script src="/static/js/app.js?v=3"></script>
+</body>
+</html>
